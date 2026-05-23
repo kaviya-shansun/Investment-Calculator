@@ -1,0 +1,43 @@
+<form class="investmentCalcCard" (ngSubmit)="onSubmit()">
+  <div class="initialBlock">
+    <div class="BlockCard">
+      <label>Initial Investment</label>
+      <input
+        type="number"
+        [(ngModel)]="enteredInitialInvestment"
+        name="initialInvestment"
+        id="initialInvestment"
+      />
+    </div>
+    <div class="BlockCard">
+      <label>Annual Investment</label>
+      <input
+        type="number"
+        [(ngModel)]="enteredAnnualInvestment"
+        name="AnnualInvestment"
+        id="AnnualInvestment"
+      />
+    </div>
+  </div>
+  <div class="expectedBlock">
+    <div class="BlockCard">
+      <label>Expected Return</label>
+      <input
+        type="number"
+        [(ngModel)]="enteredExpectedReturn"
+        name="expectedReturn"
+        id="expectedReturn"
+      />
+    </div>
+    <div class="BlockCard">
+      <label>Duration</label>
+      <input
+        type="number"
+        [(ngModel)]="enteredDuration"
+        name="duration"
+        id="duration"
+      />
+    </div>
+  </div>
+  <button class="calculateBtn">Calculate</button>
+</form>

@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+app-investment-calculator,app-investment-table{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background: radial-gradient(circle, #1b2a22, #0f1412);
+    color:rgb(233, 233, 233);
+  font-family: "Roboto Condensed", sans-serif;
+}

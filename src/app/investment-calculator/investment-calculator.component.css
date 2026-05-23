@@ -1,0 +1,58 @@
+
+.investmentCalcCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #21725b;
+    gap:20px;
+    padding: 40px;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+}
+.initialBlock{
+    display: flex;
+    gap:40px;
+}
+.BlockCard{
+    display: flex;
+    flex-direction: column;
+}
+.expectedBlock{
+    display: flex;
+    gap:40px;
+}
+.calculateBtn {
+  width: 50%;
+  padding: 0.5rem;
+  border: 1px solid #76c0ae;
+  border-radius: 0.25rem;
+  background-color: #83e6c0;
+  color: #1a1f1d;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #76c0ae;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: #c2e9e0;
+  font-size: 1rem;
+}
+input:focus{
+   outline: none;
+   border: 0.5px solid rgb(206, 203, 203);
+   border-radius: 4px;
+}
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}

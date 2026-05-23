@@ -1,0 +1,9 @@
+.investImg{
+    width: 8rem;
+    height: 8rem;
+}
+.headerCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
