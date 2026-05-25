@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { InvestmentTable } from './investment-table.model';
+import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-investment-table',
@@ -7,10 +8,11 @@ import { InvestmentTable } from './investment-table.model';
   styleUrls: ['./investment-table.component.css']
 })
 export class InvestmentTableComponent implements OnInit {
-  @Input() annualData !: InvestmentTable[];
-  constructor() { 
-    console.log("annualData",this.annualData)
+  constructor(public investmentServices: InvestmentService) {
+    console.log("investmentServices",investmentServices);
   }
+
+  investdata = this.investmentServices;
 
   ngOnInit(): void {
   }

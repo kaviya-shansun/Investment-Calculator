@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { InvestmentInput } from './investment-calculator.model';
+import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-investment-calculator',
@@ -7,13 +8,15 @@ import { InvestmentInput } from './investment-calculator.model';
   styleUrls: ['./investment-calculator.component.css']
 })
 export class InvestmentCalculatorComponent implements OnInit {
-  @Output() enteredData = new EventEmitter<InvestmentInput>();
+  // @Output() enteredData = new EventEmitter<InvestmentInput>();
   enteredInitialInvestment = 0;
   enteredAnnualInvestment = 0;
   enteredExpectedReturn = 5;
   enteredDuration = 10;
 
-  constructor() { }
+  constructor(private investmentService: InvestmentService) { 
+  
+  }
 
   ngOnInit(): void {
     
@@ -21,7 +24,7 @@ export class InvestmentCalculatorComponent implements OnInit {
 
   onSubmit(){
     console.log("Calculated",this.enteredInitialInvestment,this.enteredAnnualInvestment,this.enteredExpectedReturn,this.enteredDuration);
-    this.enteredData.emit({
+    this.investmentService.calculateInvestmentResults({
       initialInvestment: +this.enteredInitialInvestment,
       duration: +this.enteredDuration,
       expectedReturn: +this.enteredExpectedReturn,

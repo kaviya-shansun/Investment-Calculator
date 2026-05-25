@@ -1,5 +1,5 @@
 
-<div *ngIf="annualData.length > 0; else fallback">
+<div *ngIf="investdata.annualData.length > 0; else fallback">
 <table>
     <thead>
         <tr>
@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of annualData">
+        <tr *ngFor="let data of investdata.annualData">
              <td>{{ data.year }}</td>
             <td>{{ data.valueEndOfYear | currency}}</td>
             <td>{{ data.interest | currency}}</td>
